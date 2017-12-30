@@ -12,8 +12,8 @@
             height: 100%;
             grid-gap: 1px;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 10px 1fr 50px 10px;
-            grid-template-areas: "n n n" ". h ." ". c ." "f f f";
+            grid-template-rows: 10px 1fr 50px 40px 10px;
+            grid-template-areas: "n n n" ". h ." ". c ." ". c2 ." "f f f";
         }
 
         nav {
@@ -64,9 +64,17 @@
             border: 1px solid lightgray;
         }
 
+        .content-2 {
+            grid-area: c2;
+            border: none;
+            padding: 27px;
+            line-height: 2em;
+            text-align: center
+        }
+
         .footer {
             grid-area: f;
-            margin-top: 210px;
+            margin-top: 175px;
             position: relative
         }
 
@@ -82,6 +90,17 @@
             margin: 1px;
             position: absolute;
             border: none
+        }
+
+        .button {
+            height: 36px;
+            background-color: #f2f2f2;
+            border: 1px #f2f2f2;
+            border-radius: 2px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            margin: 11px 4px
         }
     </style>
 </head>
@@ -105,6 +124,11 @@
 
         <div class="content-1">
             <input id="box" type="text" title="search" autocomplete="off" value="">
+        </div>
+
+        <div class="content-2">
+            <input type="button" class="button" onclick="" value="Google Search">
+            <input type="button" class="button" onclick="" value="I'm Feeling Lucky">
         </div>
 
         <div class="footer">
